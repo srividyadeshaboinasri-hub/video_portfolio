@@ -51,8 +51,11 @@ const City = () => {
       {/* Floating Investigator ID badge */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 2.6, duration: 0.7 }}
         className="absolute top-28 left-6 md:left-12 z-20 hidden md:block">
-        <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-          className="glass rounded-2xl p-3 w-48">
+        <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}>
+        <motion.div
+          whileHover={{ scale: 1.4 }} whileTap={{ scale: 1.4 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 16 }}
+          className="glass rounded-2xl p-3 w-48 cursor-pointer origin-top-left hover:glow-gold">
           <div className="flex items-center justify-between mb-2">
             <span className="mono text-[9px] text-slate-400 tracking-widest">INVESTIGATOR ID</span>
             <span className="mono text-[9px] text-emerald-500 flex items-center gap-1">
@@ -64,6 +67,7 @@ const City = () => {
           </div>
           <p className="font-black text-slate-800 text-sm leading-none">Sri Vidya</p>
           <p className="mono text-[9px] text-[#9a7b1f] mt-1">Lead Investigator · Lvl 5</p>
+        </motion.div>
         </motion.div>
       </motion.div>
 
