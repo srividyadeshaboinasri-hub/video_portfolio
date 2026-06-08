@@ -5,3 +5,6 @@ dist/
 .env
 .env.*
 !.env.example
+
+# Workflow added via GitHub web UI (token lacks `workflow` scope)
+.github/workflows/deploy.yml
